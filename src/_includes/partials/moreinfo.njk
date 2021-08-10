@@ -1,0 +1,83 @@
+<section id="zwangerschap" class="py-10 bg-redbrown-300">
+	<div class="container max-w-5xl px-8 my-8">
+		<div class="mt-8 text-center">
+			<h2 class="my-8 text-brown-700">Zwangerschap en bevallen</h2>
+      <p>
+			Hier vindt U meer informatie vinden over uw
+			<strong>zwangerschap</strong> en <strong>bevallen</strong>.
+		</p>
+		</div>
+
+		<div
+			class="items-center p-4 mt-8 border rounded rounded-lg shadow-lg border-metal-500 bg-metal-100 sm:flex"
+		>
+			<div class="self-start mb-4 flex-shrink-1 sm:mb-0 sm:mr-4 sm:w-3/12">
+				<img src="/static/img/kelly-sikkema-WvVyudMd1Es-unsplash.jpg" alt="koppel met pasgeboren baby in de armen" />
+			</div>
+			<div class="self-start flex-1 mb-4 sm:mb-0 sm:mr-4">
+				<h2 class="mt-0 text-2xl font-bold">Materniteit campus Sint-Augustinus - GZA Ziekenhuizen</h2>
+				<p class="mt-1">Zwangerschap en bevalling in ons ziekenhuis: informatie ziekenhuis Materniteit campus Sint-Augustinus | GZA Ziekenhuizen</p>
+				<p>
+					Hier vind je alle informatie omtrent je bevalling, de zorg en je verblijf op de materniteit van de campus Sint-Augustinus
+				</p>
+				<p></p>
+			</div>
+			<div class="flex items-center">
+				<a
+					href="https://www.gzaziekenhuizen.be/"
+					class="px-6 py-3 mx-auto font-bold text-redbrown-100 no-underline transition duration-300 ease-in-out bg-redbrown-500 rounded-full hover:bg-redbrown-600 button hover:text-white"
+					>Link</a
+				>
+			</div>
+		</div>
+
+		{% set postslist = collections.post %} {% for post in postslist | reverse %}
+
+		<article
+			class="items-center p-6 mt-8 transition-shadow duration-300 ease-in-out bg-redbrown-100 border rounded shadow-sm hover:shadow-lg sm:flex"
+		>
+			<div class="relative flex-1 content">
+				{#
+				<a href="{{ post.data.link | url }}">
+					#}
+					<h1 class="m-0 text-2xl font-bold text-brown-500">
+            {% if post.data.link %}
+						<a
+							href="{{ post.data.link | url }}"
+							class="no-underline text-brown-500"
+						>
+            {% endif %}
+							{% if post.data.title %} {{ post.data.title }} {% else %} Untitled
+							{% endif %}
+						{% if post.data.link %}
+            </a>
+            {% endif %}
+					</h1>
+					{# {% if post.data.description %}
+					<p class="mt-2">{{ post.data.description }}</p>
+					{% endif %} #}
+					<div class="mt-2">
+						{% if post.templateContent %}
+						{{ post.templateContent | safe }}
+						{% endif %}
+					</div>
+
+					{#
+				</a>
+				#}
+			</div>
+
+			{% if post.data.link %}
+			<div class="pt-4 link sm:w-1/4 sm:pl-8 sm:pt-0">
+				<a
+					href="{{ post.data.link | url }}"
+					class="block px-4 py-3 text-center text-redbrown-200 no-underline bg-redbrown-700 rounded cursor-pointer hover:bg-redbrown-600 hover:text-white"
+				>
+					LINK →
+				</a>
+			</div>
+			{% endif %}
+		</article>
+		{% endfor %}
+	</div>
+</section>

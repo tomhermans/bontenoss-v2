@@ -1,0 +1,44 @@
+<section class="bg-redbrown-300 mt-15">
+	<div class="container pt-4">
+    <div class="mt-8 text-center">
+      <h1 class="my-8">Meer informatie</h1>
+    </div>
+		{% set postslist = collections.post %} {% for post in postslist | reverse %}
+		<article class="my-8">
+			<h2 class="mb-2 text-3xl font-bold text-gray-900">
+				<a href="{{ post.url | url }}">
+					{% if post.data.title %} {{ post.data.title }} {% else %} Untitled {%
+					endif %}
+				</a>
+			</h2>
+			<p class="mb-3 text-base leading-6 text-gray-500">
+				<time>
+					{{ post.date | readableDate }} by
+					<a>{{ post.data.author }}</a>
+				</time>
+			</p>
+			{% if post.data.description %}
+			<p class="mb-3 text-lg text-gray-500">{{ post.data.description }}</p>
+			{% endif %}
+      {% if post.data.link %}
+      <p>
+				<a
+					href="{{ post.data.link | url }}"
+					class="text-lg font-bold text-indigo-500"
+				>
+					{{ post.data.link | url }} →
+				</a>
+			</p>
+      {% endif %}
+			<p>
+				<a
+					href="{{ post.url | url }}"
+					class="text-lg font-bold text-indigo-500"
+				>
+					Read more →
+				</a>
+			</p>
+		</article>
+		{% endfor %}
+	</div>
+</section>

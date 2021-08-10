@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {{title}}
+    </title>
+{#
+    {% if settings.description %}
+      <meta name="description" content="{{settings.description}}"/>
+    {% endif %} #}
+
+    {# <link rel="canonical" href="{{ settings.canonical }}" />
+     #}
+    <meta name="robots" content="{{ settings.robots }}" />
+
+    <link rel="preload" href="/static/fonts/Calendas/Calendas_Plus-subset.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/static/fonts/Basier/Basier-Circle-semibold-webfont/basiercircle-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+
+    {% block head %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    {% if prism == true %}
+      <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
+    {% endif %}
+    {% seo "" %}
+
+    <meta property="og:image" content="https://bontenoss.be/static/img/og-image.jpg" />
+  </head>
+  <body>
+    <a href="#main-content">Skip to Content</a>
+    {% include "./partials/navbar.html" %}
+
+    <main id="main-content" tabindex="-1">
+      {{ content | safe }}
+    </main>
+
+    {% include "./partials/footer.html" %}
+
+    <script src="/static/js/alpine.js"></script>
+
+
+    {% if path == "home" %}
+      <!-- Netlify Identity Widget -->
+      <!-- Needed only if you are using Netlify Identity feature -->
+      <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    {% endif %}
+
+  </body>
+</html>

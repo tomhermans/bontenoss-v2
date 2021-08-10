@@ -1,0 +1,9 @@
+[build]
+  publish = "_site"
+  command = "npm run build"
+
+# https://answers.netlify.com/t/access-control-allow-origin-policy/1813/17
+[[headers]]
+   for = "/*"
+   [headers.values]
+      Access-Control-Allow-Origin = "*"

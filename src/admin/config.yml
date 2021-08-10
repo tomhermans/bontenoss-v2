@@ -1,0 +1,176 @@
+backend:
+  # Use netlify identity as backend
+  name: git-gateway
+  branch: main
+  ### enable below lines for github integration ###
+  # name: github
+  # repo: surjithctly/neat-starter
+media_folder: "src/static/img"
+public_folder: "/static/img"
+
+# Please run "npx netlify-cms-proxy-server" for local backend
+local_backend: true
+# publish_mode: editorial_workflow
+collections:
+  - label: "Testimonials"
+    name: "testimonials"
+    folder: "src/testimonials"
+    widget: "list"
+    summary: '{{fields.quote}} - {{fields.author.name}}'
+    create: true
+    editor:
+      preview: true
+    fields:
+      - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
+      - label: Author
+        name: author
+        widget: object
+        fields:
+          - {label: Name, name: name, widget: string, default: "Emmet"}
+          - {label: Avatar, name: avatar, widget: image, default: "/img/03-twitter.svg"}
+  - label: "Blog"
+    name: "blog"
+    folder: "src/posts"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Link", name: "link", widget: "string", required: false }
+      - widget: select
+        label: "tags"
+        name: "tags"
+        multiple: true
+        create: true
+        required: false
+        options: ["Tags", "created", "from", "config.yml"]
+
+  # Linkcards
+  - name: "linkcard"
+    label: "Linkcard"
+    folder: "src/linkcards"
+    create: true # Change to true to allow editors to create new linkcards
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Description", name: "desc", widget: "markdown", required: false }
+      - { label: "Link", name: "link", widget: "string", required: false }
+      - { label: "Image", name: "thumbnail", widget: "image", required: false }
+
+  # Our Doctors
+  - name: "doctor"
+    label: "Doctor"
+    folder: "src/doctors"
+    create: true # Change to true to allow editors to create new doctors
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      # - { label: "Description", name: "desc", widget: "markdown", required: false }
+      - { label: "Calendar", name: "calendar", widget: "markdown", required: false }
+      - label: "List Extra"
+        name: "listextra"
+        minimize_collapsed: false
+        widget: "list"
+        fields:
+          - {label: List Item, name: listitem, widget: string, default: ""}
+      # - {
+      #   label: "Specialisation",
+      #   name: "specialisation",
+      #   widget: "list",
+      #   default: [""],
+      #   allow_add: true,
+      #   collapsed: false,
+      #   fields:
+      #     - label: Quote, name: quote, widget: string, default: "Everything is awesome!"
+      #     - label: Author, name: author, widget: string,
+      # }
+
+      - { label: "Image", name: "thumbnail", widget: "image", required: false }
+      - { label: "Avatar", name: "avatar", widget: "image", required: false }
+      - widget: select
+        label: "Direction"
+        name: "direction"
+        required: false
+        options: ["Default", "TextLeft", "TextRight"]
+
+
+  # Our pages e.g. About
+  - label: "Pages"
+    name: "page"
+    folder: "src/pages"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - widget: select
+        label: "tags"
+        name: "tags"
+        multiple: true
+        required: false
+        create: true
+        options: ["Tags", "created", "from", "config.yml"]
+
+  - label: "Settings"
+    name: "settings"
+    editor:
+      preview: false
+    files:
+      - label: "Navigation"
+        name: "items"
+        file: "src/_data/navigation.yaml"
+        fields:
+          - label: Nav Items
+            name: items
+            widget: list
+            allow_add: false
+            collapsed: false
+            fields:
+              - { label: Title, name: text, widget: string }
+              - { label: URL, name: url, widget: string }
+      - label: "Quick Links"
+        name: "links"
+        file: "src/_data/quicklinks.yaml"
+        fields:
+          - label: Nav Items
+            name: links
+            widget: list
+            collapsed: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: URL, name: url, widget: string }
+              - { label: Description, name: desc, widget: string }
+      - label: "Meta Settings"
+        name: "settings"
+        file: "src/_data/settings.yaml"
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Author, name: author, widget: string }
+          - { label: URL, name: url, widget: string }
+      - label: "Drinks"
+        name: "drinks"
+        file: "src/_data/drinks.yaml"
+        fields:
+          - label: drinks
+            name: items
+            widget: list
+            collapsed: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Price, name: price, widget: string }
+              - { label: Description, name: desc, widget: string, required: false }
+              - { label: Type, name: type, widget: string }

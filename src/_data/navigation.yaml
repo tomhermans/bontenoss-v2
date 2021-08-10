@@ -1,0 +1,7 @@
+items:
+  - text: Menu
+    url: "#menu"
+  - text: Reserveer
+    url: "#reserveren"
+  - text: Contact
+    url: "#contact"

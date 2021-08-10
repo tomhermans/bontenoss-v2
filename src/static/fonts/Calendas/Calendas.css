@@ -1,0 +1,20 @@
+@font-face {
+      font-family: "CalendasPlus";
+      src: url("/assets/fonts/Calendas_Plus-subset.woff2") format("woff2"),
+          url("/assets/fonts/Calendas_Plus-subset.woff") format("woff");
+      font-weight: normal;
+    }
+
+    @font-face {
+      font-family: "CalendasPlus";
+      src: url("/assets/fonts/Calendas_Plus_Bold-subset.woff2") format("woff2"),
+          url("/assets/fonts/Calendas_Plus_Bold-subset.woff") format("woff");
+      font-weight: bold;
+    }
+
+    @font-face {
+      font-family: "CalendasPlus";
+      src: url("/assets/fonts/Calendas_Plus_Italic-subset.woff2") format("woff2"),
+          url("/assets/fonts/Calendas_Plus_Italic-subset.woff") format("woff");
+      font-style: italic;
+    }

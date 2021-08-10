@@ -1,0 +1,179 @@
+items:
+  - title: Rode Wijn ofzo
+    price: 2
+    price2: 10
+    desc: Red wine
+    type: wine
+  - title: Pils
+    price: 2
+    price2: 10
+    desc: regular pils
+    type: beer
+  - title: Coca Cola
+    price: 2
+    price2: 10
+    desc: coke
+    type: softdrink
+  - title: Duvel
+    price: 3,5
+    price2: 10
+    desc: Stronger beer
+    type: beer
+  - title: Herkenrode Tripel
+    price: "4"
+    type: beer
+    price2: 10
+    desc: ""
+  - title: Tönissteiner Citron
+    price: "2"
+    price2: 10
+    desc: Tönissteiner Citron
+    type: softdrink
+  - title: Karmeliet
+    price: "4"
+    price2:
+    desc: Karmelietenbier
+    type: beer
+  - title: Domaine Saint Hilaire Vermentino
+    price: "4,50"
+    price2: "22"
+    desc: Wit
+    type: wijn
+  - title: Domaine Saint Hilaire Rosé
+    price: "4,50"
+    price2: "22"
+    desc: Rosé
+    type: wijn
+  - title: Domaine Saint Hilaire Merlot
+    price: "4,50"
+    price2: "22"
+    desc: Rood
+    type: wijn
+  - title: l'Arbuc
+    price: "5"
+    price2: "23"
+    desc: Cava
+    type: cava
+  - title: Genoels-Elderen 'Chardonnay Blauw'
+    price: "10,83"
+    price2: "55,40"
+    desc: Wit / Haspengouw
+    type: wijn
+  - title: Domaine Samuel Billaud "Les Grandes Terroirs"
+    price: "11,99"
+    price2: "38"
+    desc: Wit / Chablis
+    type: wijn
+  - title: Domaine Jomain "Puligny-Montrachet"
+    price: "28,48"
+    price2: "85"
+    desc: Wit / Bourgogne
+    type: wijn
+  - title: Domaine du Chapitre Touraine Sauvignon
+    price: "6,35"
+    price2: "27"
+    desc: Wit / Loire
+    type: wijn
+  - title: Domaine Léon Boesch "Grandes Lignes"
+    price: "8,79"
+    price2: "28,50"
+    desc: Wit / Elzas
+    type: wijn
+  - title: Domaine Respide-Médeville
+    price: "11,14"
+    price2: "36"
+    desc: Wit / Graves
+    type: wijn
+  - title: Santiago Roma
+    price: "8,95"
+    price2: "29"
+    desc: Wit / Rias Baixas
+    type: wijn
+  - title: Casal Farneto Verdicchio 'Fontevecchia'
+    price: "6,69"
+    price2: "26"
+    desc: Wit / Marche
+    type: wijn
+  - title: Casal Farneto Verdicchio 'Crisio'
+    price: "12,35"
+    price2: "40"
+    desc: Wit / Marche
+    type: wijn
+  - title: Nizza Silvano
+    price: "8,84"
+    price2: "30"
+    desc: Wit / Piemonte
+    type: wijn
+  - title: Famiglia Pasqua 'Hey French'
+    price: "20,55"
+    price2: "67,50"
+    desc: Wit / Veneto
+    type: wijn
+  - title: Domaine de l'Amaurigue 'Fleur Rosé'
+    price: "7,95"
+    price2: "29"
+    desc: Rosé / Provence
+    type: wijn
+  - title: Fleur Blanc + Rouge
+    price: "29"
+    price2:
+    desc:
+    type: wijn
+  - title: Châteay Mire l'Etang 'Cuvée des Ducs'
+    price: "8,45"
+    price2: "29"
+    desc: Rood / La Clape
+    type: wijn
+  - title: Closerie des Eyrins
+    price: "17,55"
+    price2: "58"
+    desc: Rood / Margaux
+    type: wijn
+  - title: Leplan-Vermeersch GT-S
+    price: "12,89"
+    price2: "41,50"
+    desc: Rood / Suze la Rousse
+    type: wijn
+  - title: Clos 93 'Interrogant'
+    price: "11,40"
+    price2: "36,50"
+    desc: Rood / Priorat
+    type: wijn
+  - title: Yllera 12 Meses en barrica
+    price: "6,69"
+    price2: "26"
+    desc: Rood / Castilla-y-Léon
+    type: wijn
+  - title: Rodriguez Sanzo 'Whisky Barrel Aged'
+    price: "17,89"
+    price2: "57,50"
+    desc: Rood / Toro
+    type: wijn
+  - title: Conte Vistarino 'Pinot Nero'
+    price: "8,12"
+    price2: "28"
+    desc: Rood / Lombardije
+    type: wijn
+  - title: Nizza Silvano Superiore
+    price: "11,55"
+    price2: "37"
+    desc: Rood / Barbera d'Alba
+    type: wijn
+  - title: Castello Banfi 'Aska'
+    price: "15,44"
+    price2: "49,50"
+    desc: Rood / Bolgheri
+    type: wijn
+  - title: Famiglia Pasqua 'Amarone'
+    price: "16,85"
+    price2: "54"
+    desc: Rood / Veneto
+    type: wijn
+  - title: Tignanello
+    price: "75,88"
+    price2: "159"
+    desc: Rood / Margaux
+    type: wijn
+
+
+

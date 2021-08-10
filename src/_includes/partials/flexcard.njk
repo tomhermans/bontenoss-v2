@@ -1,0 +1,14 @@
+<div class="items-center p-4 mt-8 border rounded rounded-lg shadow-lg border-metal-500 bg-metal-100 sm:flex">
+  <div class="self-start mb-4 flex-shrink-1 sm:mb-0 sm:mr-4 sm:w-3/12">
+    <img src="{{ linkcard.data.thumbnail }}" class="rounded-md" alt="{{ linkcard.data.title }}">
+  </div>
+  <div class="self-start flex-1 mb-4 sm:mb-0 sm:mr-4">
+    <h2 class="mt-0 text-2xl font-bold">{{ linkcard.data.title }}</h2>
+    <p class="mt-1">
+      {{ linkcard.templateContent | safe }}
+    </p>
+  </div>
+  <div class="flex items-center">
+    <a href="{{ linkcard.data.link }}" class="px-6 py-2 mx-auto font-bold text-redbrown-100 no-underline transition duration-300 ease-in-out bg-redbrown-600 rounded-full hover:bg-redbrown-500 button hover:text-white">Link</a>
+  </div>
+</div>

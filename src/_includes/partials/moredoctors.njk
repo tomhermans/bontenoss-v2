@@ -1,0 +1,42 @@
+<section class="py-10 bg-redbrown-300">
+  <div class="container max-w-5xl px-8 my-8">
+    <div class="mt-8 text-center">
+      <h2 class="my-8 text-brown-700">More Doctors</h2>
+    </div>
+		{% set postslist = collections.doctor %} {% for post in postslist | reverse %}
+
+    <article class="items-center p-6 mt-8 transition-shadow duration-300 ease-in-out bg-redbrown-100 border rounded shadow-sm hover:shadow-lg sm:flex">
+      <div class="relative flex-1 content">
+        <a href="{{ post.data.link | url }}">
+          <h1 class="m-0 text-2xl font-bold text-brown-500">
+            <a
+              href="{{ post.data.link | url }}"
+              class="no-underline text-brown-500 "
+            >
+              {% if post.data.name %} {{ post.data.name }} {% else %} Untitled {%
+              endif %}
+            </a>
+          </h1>
+          {% if post.content %}
+            <p class="mt-2">{{ post.content }}
+            {{ post.content | safe }}
+            </p>
+          {% endif %}
+        </a>
+      </div>
+
+      {% if post.data.link %}
+      <div class="pt-4 link sm:w-1/4 sm:pl-8 sm:pt-0">
+				<a
+					href="{{ post.data.link | url }}"
+					class="block px-4 py-3 text-center text-redbrown-200 no-underline bg-redbrown-700 rounded cursor-pointer hover:bg-redbrown-600 hover:text-white"
+				>
+					LINK →
+				</a>
+			</div>
+      {% endif %}
+
+      </article>
+		{% endfor %}
+  </div>
+</section>

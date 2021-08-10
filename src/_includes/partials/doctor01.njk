@@ -1,0 +1,54 @@
+<li class="col-span-1 bg-white rounded-lg shadow">
+  <div class="flex flex-wrap items-center w-full p-4 border-b">
+    <img
+      src="{{ doctor.data.thumbnail }}"
+      class="mr-6 border border-red-900 rounded-full shadow-2xl shadow-inner w-14 h-14 border-1"
+      alt=""
+    />
+
+    <h2 class="pt-3 text-2xl font-semibold flex-9999">{{ doctor.data.name }}</h2>
+  </div>
+  <div class="p-4 leading-5 text-gray-800 sm:ml-20 sm:pr-8">
+    <small>{{ doctor.data.date | readableDate }}</small>
+    <p>
+      {{ doctor.data.desc | safe }}
+    </p>
+
+  </div>
+  <div class="flex items-start w-full p-3">
+    <div
+      class="flex items-center justify-center flex-shrink-0 w-16 h-16 text-4xl font-bold leading-5 text-center text-white bg-redbrown-800 rounded-md"
+    >
+      <svg
+        class="h-10 fill-current"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="40" cy="40" r="100" fill="red"></circle>
+      </svg>
+    </div>
+    <div class="flex-1 px-4">
+      <div
+        class="text-lg font-medium leading-5 text-gray-900 transition duration-150 ease-in-out hover:text-gray-600"
+      >
+        Data Map
+      </div>
+      <p class="text-sm leading-5 text-gray-500">
+        View performance measures on a map.
+      </p>
+    </div>
+  </div>
+  <div class="border-t border-gray-200">
+    <div class="flex -mt-px">
+      <div class="flex flex-1 w-0 border-r border-gray-200">
+        <a
+          href="#"
+          class="relative inline-flex items-center justify-center flex-1 w-0 py-3 -mr-px text-sm font-normal font-medium leading-5 text-gray-700 transition duration-500 ease-in-out border border-transparent rounded-bl-lg focus:outline-none focus:shadow-outline-redbrown focus:border-purple-300 hover:bg-purple-300 hover:text-white hover:font-bold focus:z-10"
+        >
+          <span class="ml-3">Download PDF →</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</li>
